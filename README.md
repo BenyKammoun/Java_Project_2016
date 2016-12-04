@@ -21,6 +21,4 @@ To make things more easy, i propose some rules everyone should follow:
 
 5) After everyone participating on the project has agreed on each other changes you can merge them to the master Branch.
 
-# Sun. 04/12/2016
-
 
