@@ -1,3 +1,15 @@
 <resources>
-    <string name="app_name">Java_Project_2016</string>
+    <!-- top bar string values -->
+    <string name="app_name">App Name</string>
+
+    <!-- TextViews strings -->
+    <string name="sign_in">Sign in</string>
+    <string name="shw_me_psswd">Show me password</string>
+
+    <!-- EditText strings -->
+    <string name="user_name">User Name</string>
+    <string name="passwd">Password</string>
+
+    <!-- Button strings -->
+    <string name="register">Sign up</string>
 </resources>
