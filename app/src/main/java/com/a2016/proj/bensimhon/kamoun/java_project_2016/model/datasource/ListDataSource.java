@@ -1,4 +1,4 @@
-package com.a2016.proj.bensimhon.kamoun.java_project_2016.model.datasource;
+package com.a2016.proj.bensimhon.kamoun.java_project_2016.Model.DataSource;
 
 import android.content.ContentProvider;
 import android.content.ContentValues;
@@ -11,10 +11,6 @@ import android.support.annotation.Nullable;
  */
 
 public class ListDataSource extends ContentProvider {
-
-
-
-
     @Override
     public boolean onCreate() {
         return false;

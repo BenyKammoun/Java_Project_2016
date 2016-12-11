@@ -5,4 +5,5 @@ package com.a2016.proj.bensimhon.kamoun.java_project_2016.Model.Entities;
  */
 
 public class BusinessActivity {
+
 }
