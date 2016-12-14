@@ -1,4 +1,4 @@
-package com.a2016.proj.bensimhon.kamoun.java_project_2016.Model.Entities;
+package com.a2016.proj.bensimhon.kamoun.java_project_2016.Model.entities;
 
 import android.location.Address;
 import android.provider.ContactsContract;
@@ -9,6 +9,9 @@ import java.net.URL;
  */
 
 public class Business {
+    /*
+    * Business class fields.
+    * */
     private int ID;
     private String name;
     private Address address;
@@ -16,6 +19,9 @@ public class Business {
     private ContactsContract.CommonDataKinds.Email email;
     private URL website;
 
+    /*
+    * Business class methods (getters, setters).
+    * */
     public int getID() {
         return ID;
     }

@@ -1,4 +1,4 @@
-package com.a2016.proj.bensimhon.kamoun.java_project_2016.Model.DataSource;
+package com.a2016.proj.bensimhon.kamoun.java_project_2016.Model.data_source;
 
 import android.content.ContentProvider;
 import android.content.ContentValues;
