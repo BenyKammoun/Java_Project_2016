@@ -6,7 +6,7 @@
     <string name="sign_in">Sign in</string>
     <string name="shw_me_psswd">Show me password</string>
     <string name="nxt">Next</string>
-    <string name="lgn_msg">Don't have an account yet? click next to sign-up.</string>
+    <string name="lgn_msg">Don\'t have an account yet? click next to sign-up.</string>
 
     <!-- EditText strings -->
     <string name="user_name">User Name</string>
