@@ -8,7 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.a2016.proj.bensimhon.kamoun.java_project_2016.MainActivity">
+    tools:context="com.a2016.proj.bensimhon.kamoun.java_project_2016.controller.MainActivity">
 
     <TextView
         android:id="@+id/sign_txt"
@@ -39,7 +39,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/passwd_input"
-        android:text="@string/sign_in"/>
+        android:text="@string/sign_in"
+        android:onClick="goButtonClicked" />
 
     <Button
         android:id="@+id/reg_button"
