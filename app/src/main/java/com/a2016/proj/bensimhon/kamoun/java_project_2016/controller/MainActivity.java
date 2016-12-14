@@ -25,6 +25,14 @@ public class MainActivity extends AppCompatActivity  {
         addBusiness();
     }
 
+
+    private void readFromCP()
+    {
+
+
+    }
+
+
     private void addBusiness() {
         final Uri uri = Uri.parse("content://com.a2016.proj.Business");
         final ContentValues contentValues = new ContentValues();
