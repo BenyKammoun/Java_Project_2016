@@ -1,7 +1,5 @@
 package com.a2016.proj.bensimhon.kamoun.java_project_2016.model.entities;
 
-import android.location.Address;
-import android.provider.ContactsContract;
 import java.net.URL;
 
 /**
@@ -15,8 +13,8 @@ public class Business {
     private int ID;
     private String name;
     private Address address;
-    private int phoneNumb;
-    private ContactsContract.CommonDataKinds.Email email;
+    private String phoneNumb;
+    private String email;
     private URL website;
 
     /*
@@ -39,17 +37,17 @@ public class Business {
     public Address getAddress() { return address; }
     public void setAddress(Address address) { this.address = address; }
 
-    public int getPhoneNumb() {
+    public String getPhoneNumb() {
         return phoneNumb;
     }
-    public void setPhoneNumb(int phoneNumb) {
+    public void setPhoneNumb(String phoneNumb) {
         this.phoneNumb = phoneNumb;
     }
 
-    public ContactsContract.CommonDataKinds.Email getEmail() {
+    public String getEmail() {
         return email;
     }
-    public void setEmail(ContactsContract.CommonDataKinds.Email email) {
+    public void setEmail(String email) {
         this.email = email;
     }
 
