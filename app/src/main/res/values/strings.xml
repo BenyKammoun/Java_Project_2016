@@ -1,9 +1,9 @@
 <resources>
     <!-- top bar string values -->
-    <string name="app_name"></string>
+    <string name="app_name">App Name</string>
 
     <!-- TextViews strings -->
-    <string name="sign_in">Sign in</string>
+    <string name="sign_in">Sign In</string>
     <string name="shw_me_psswd">Show me password</string>
     <string name="nxt">Next</string>
     <string name="lgn_msg">Don\'t have an account yet? click next to sign-up.</string>
@@ -13,5 +13,10 @@
     <string name="passwd">Password</string>
 
     <!-- Button strings -->
-    <string name="register">Sign up</string>
+    <string name="register">Sign Up</string>
+
+    <!-- Image Descriptions -->
+    <string name="lgn_dscptn">Log In icon</string>
+    <string name="sgnp_dscptn">Sign Up icon</string>
+    <string name="nxt_dscpn">Next Icon</string>
 </resources>

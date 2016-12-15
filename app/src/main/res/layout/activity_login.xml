@@ -10,60 +10,46 @@
 
     <TextView
         android:id="@+id/sign_txt"
-        style="@style/ConnectMainDesg"
-        android:textAlignment="center"
-        android:textSize="70sp"
+        style="@style/TittleTextView"
         android:text="@string/sign_in" />
+
+    <ImageView
+        android:id="@+id/sign_img"
+        android:layout_below="@+id/sign_txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:src="@drawable/log_in"
+        android:contentDescription="@string/lgn_dscptn" />
 
     <EditText
         android:id="@+id/user_nm_input"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textColor="@android:color/white"
-        android:layout_below="@id/sign_txt"
+        android:layout_below="@id/sign_img"
+        style="@style/PrimaryEdiTextStyle"
         android:text="@string/user_name"
-        android:inputType="textEmailAddress"
-        android:selectAllOnFocus="true"/>
+        android:inputType="textEmailAddress"/>
 
     <EditText
         android:id="@+id/passwd_input"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textColor="@android:color/white"
         android:layout_below="@id/user_nm_input"
+        style="@style/PrimaryEdiTextStyle"
         android:text="@string/passwd"
-        android:inputType="textPassword"
-        android:selectAllOnFocus="true"/>
+        android:inputType="textPassword" />
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        style="@style/ConnectMainDesg"
-        android:text="@string/lgn_msg"
         android:layout_below="@+id/passwd_input"
-        android:textAlignment="center"
-        android:textSize="20sp"/>
+        style="@style/SecondaryTextView"
+        android:text="@string/lgn_msg" />
 
-    <LinearLayout
+    <ImageView
         android:id="@+id/reg_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:onClick="signUpClick">
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="@style/ConnectMainDesg"
-            android:textSize="35sp"
-            android:text="@string/nxt"
-            android:background="@color/colorPrimary" />
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/next"
-            android:contentDescription="@string/nxt"/>
-    </LinearLayout>
+        android:src="@mipmap/ic_done_white_24dp"
+        android:contentDescription="@string/nxt_dscpn"
+        android:onClick="signUpClick" />
 
 </RelativeLayout>

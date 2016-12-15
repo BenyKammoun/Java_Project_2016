@@ -8,10 +8,42 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <style name="ConnectMainDesg">
-        <item name="android:textColor">@android:color/white</item>
+    <!-- TextView Primary -->
+    <style name="TittleTextView">
+        <item name="android:textSize">34sp</item>
+        <item name="android:textColor">@color/abc_primary_text_material_dark</item>
+        <item name="android:textAlignment">center</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
+
+    <!-- TextView Secondary -->
+    <style name="SecondaryTextView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/abc_primary_text_material_dark</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:padding">16dp</item>
+    </style>
+
+    <!-- EdtitText Primary Style -->
+    <style name="PrimaryEdiTextStyle">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/abc_primary_text_material_dark</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:selectAllOnFocus">true</item>
+    </style>
+
+    <style name="ButtonStyle">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="HeadLineTextView">
+        <item name="android:textSize">24sp</item>
+    </style>
+
+
 
 </resources>
