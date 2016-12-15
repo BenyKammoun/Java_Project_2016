@@ -1,4 +1,4 @@
-package com.a2016.proj.bensimhon.kamoun.java_project_2016.Model.entities;
+package com.a2016.proj.bensimhon.kamoun.java_project_2016.model.entities;
 
 import android.location.Address;
 import android.provider.ContactsContract;

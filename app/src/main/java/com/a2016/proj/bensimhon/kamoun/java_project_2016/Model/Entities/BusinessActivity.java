@@ -1,6 +1,6 @@
-package com.a2016.proj.bensimhon.kamoun.java_project_2016.Model.entities;
+package com.a2016.proj.bensimhon.kamoun.java_project_2016.model.entities;
 
-import com.a2016.proj.bensimhon.kamoun.java_project_2016.Model.enums.Countries;
+import com.a2016.proj.bensimhon.kamoun.java_project_2016.model.enums.Countries;
 
 /**
  * Created by Binyamin Kamoun on 08/12/2016.

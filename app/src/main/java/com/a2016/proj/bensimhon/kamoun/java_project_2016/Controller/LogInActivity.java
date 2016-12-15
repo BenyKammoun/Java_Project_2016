@@ -1,9 +1,9 @@
-package com.a2016.proj.bensimhon.kamoun.java_project_2016.Controller;
+package com.a2016.proj.bensimhon.kamoun.java_project_2016.controller;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-
+import android.view.View;
 import com.a2016.proj.bensimhon.kamoun.java_project_2016.R;
 
 /**
@@ -20,8 +20,12 @@ public class LogInActivity extends Activity{
     /*
     * Events
     * */
-    public void signUpClick(){
-        Intent regIntent = new Intent(LogInActivity.this, SignUpActivity.class);
+    public void signUpClick(View view){
+        //IF(User doesn't exist)
+        //    then GO TO SIGN-UP ACTIVITY
+        //ELSE
+        //    GO TO MAIN ACTIVITY
+        Intent regIntent = new Intent(this, SignUpActivity.class);
         startActivity(regIntent);
     }
 }

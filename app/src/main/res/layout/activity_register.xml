@@ -51,7 +51,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:buttonTint="@android:color/white"
-        android:text="@string/shw_me_psswd" />
+        android:text="@string/shw_me_psswd"
+        android:onClick="onCheckBoxClick"/>
 
     <ImageView
         android:id="@+id/reg_btn"
