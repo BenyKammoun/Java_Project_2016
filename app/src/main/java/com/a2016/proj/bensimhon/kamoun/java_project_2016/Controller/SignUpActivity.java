@@ -1,26 +1,22 @@
 package com.a2016.proj.bensimhon.kamoun.java_project_2016.controller;
 
-import android.app.Activity;
+import android.content.Intent;
+import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.InputType;
 import android.view.View;
 import android.widget.CheckBox;
-import android.content.Intent;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 
 import com.a2016.proj.bensimhon.kamoun.java_project_2016.R;
 
-/**
- * Created by Binyamin Kamoun on 14/12/2016.
- */
-
-public class SignUpActivity extends Activity {
+public class SignUpActivity extends AppCompatActivity {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState){
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_register);
+        setContentView(R.layout.activity_sign_up);
     }
 
     public void onCheckBoxClick(View view){

@@ -8,8 +8,19 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".controller.LogInActivity" />
-        <activity android:name=".controller.SignUpActivity"></activity>
+        <activity android:name=".controller.LogInActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".controller.SignUpActivity" />
+        <activity
+            android:name=".controller.Wellcome"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_wellcome"
+            android:theme="@style/FullscreenTheme"></activity>
     </application>
 
 </manifest>

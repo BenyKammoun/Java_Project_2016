@@ -19,4 +19,8 @@
     <string name="lgn_dscptn">Log In icon</string>
     <string name="sgnp_dscptn">Sign Up icon</string>
     <string name="nxt_dscpn">Next Icon</string>
+
+    <string name="title_activity_wellcome">Wellcome</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
 </resources>
