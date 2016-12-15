@@ -16,7 +16,7 @@ public class DBContract {
     public static final String BusinessActivityAUTHORITY = "com.a2016.proj.BusinessActivity";
 
 
-    public static class Business {
+    public static class BusinessC {
         /**
          * A content:// style uri to the authority for the contacts provider
          */
@@ -38,7 +38,7 @@ public class DBContract {
         public static final Uri STUDENT_URI = Uri.withAppendedPath(AUTHORITY_URI, "business");
     }
 
-    public static class BusinessActivity {
+    public static class BusinessActivityC {
         /**
          * A content:// style uri to the authority for the contacts provider
          */

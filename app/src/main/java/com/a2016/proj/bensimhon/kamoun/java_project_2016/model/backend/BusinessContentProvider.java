@@ -1,6 +1,7 @@
 package com.a2016.proj.bensimhon.kamoun.java_project_2016.model.backend;
 
 import android.content.ContentProvider;
+import android.content.ContentUris;
 import android.content.ContentValues;
 import android.database.Cursor;
 import android.net.Uri;
@@ -30,12 +31,16 @@ public class BusinessContentProvider extends ContentProvider {
     @Nullable
     @Override
     public Uri insert(Uri uri, ContentValues contentValues) {
-        return null;
+        long id =-1;
+        id=DBManagerFactory.getBusinessManager().addBusiness(contentValues);
+        return ContentUris.withAppendedId(uri, id);
     }
 
     @Override
     public int delete(Uri uri, String s, String[] strings) {
-        return 0;
+        long id = -1;
+                if (DBManagerFactory.getBusinessManager().removeBusiness(id));
+                    return 1;
     }
 
     @Override

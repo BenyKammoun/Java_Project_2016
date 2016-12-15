@@ -45,9 +45,9 @@ public class List_Business {
     public Cursor getBusiness() {
         String[] columns = new String[]
                 {
-                        DBContract.Business.ID,
-                        DBContract.Business.NAME,
-                        DBContract.Business.ADRESS
+                        DBContract.BusinessC.ID,
+                        DBContract.BusinessC.NAME,
+                        DBContract.BusinessC.ADRESS
                 };
 
         MatrixCursor matrixCursor = new MatrixCursor(columns);
@@ -73,14 +73,14 @@ public class List_Business {
     private Business ContentValuesToBusiness(ContentValues contentValues) {
 
         Business business = new Business();
-        business.setID(contentValues.getAsInteger(DBContract.Business.ID));
-        business.setName(contentValues.getAsString(DBContract.Business.NAME));
-        business.setPhoneNumb(contentValues.getAsLong(DBContract.Business.PHONE));
+        business.setID(contentValues.getAsInteger(DBContract.BusinessC.ID));
+        business.setName(contentValues.getAsString(DBContract.BusinessC.NAME));
+        business.setPhoneNumb(contentValues.getAsLong(DBContract.BusinessC.PHONE));
 
         Address busAddr = new Address();
-        busAddr.setCity(contentValues.getAsString(DBContract.Business.CITY));
-        busAddr.setCountry(contentValues.getAsString(DBContract.Business.COUNTRY));
-        busAddr.setStreet(contentValues.getAsString(DBContract.Business.STREET));
+        busAddr.setCity(contentValues.getAsString(DBContract.BusinessC.CITY));
+        busAddr.setCountry(contentValues.getAsString(DBContract.BusinessC.COUNTRY));
+        busAddr.setStreet(contentValues.getAsString(DBContract.BusinessC.STREET));
         business.setAddress(busAddr);
 
         return business;

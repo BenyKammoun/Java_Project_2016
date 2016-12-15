@@ -32,17 +32,19 @@ public class MainActivity extends AppCompatActivity  {
 
     }
 
-
     private void addBusiness() {
         final Uri uri = Uri.parse("content://com.a2016.proj.Business");
         final ContentValues contentValues = new ContentValues();
-        contentValues.put(DBContract.Business.ID, Integer.valueOf(123));
-        contentValues.put(DBContract.Business.NAME,"mybusn");
-        contentValues.put(DBContract.Business.CITY, "aaaaa");
-        contentValues.put(DBContract.Business.STREET, "street");
-        contentValues.put(DBContract.Business.COUNTRY, "country");
+        contentValues.put(DBContract.BusinessC.ID, Integer.valueOf(123));
+        contentValues.put(DBContract.BusinessC.NAME,"mybusn");
+        contentValues.put(DBContract.BusinessC.CITY, "aaaaa");
+        contentValues.put(DBContract.BusinessC.STREET, "street");
+        contentValues.put(DBContract.BusinessC.COUNTRY, "country");
 
         getContentResolver().insert(uri,contentValues);
+
+
+
 
         LB.equals(null);
     }
