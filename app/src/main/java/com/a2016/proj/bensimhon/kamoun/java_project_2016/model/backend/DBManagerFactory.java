@@ -1,7 +1,7 @@
 package com.a2016.proj.bensimhon.kamoun.java_project_2016.model.backend;
 
-import com.a2016.proj.bensimhon.kamoun.java_project_2016.model.datasource.List_Business;
-import com.a2016.proj.bensimhon.kamoun.java_project_2016.model.datasource.List_BusinessActivity;
+import com.a2016.proj.bensimhon.kamoun.java_project_2016.model.backend.DB_manager;
+import com.a2016.proj.bensimhon.kamoun.java_project_2016.model.data_source.List_DBManager;
 
 /**
  * Created by mailo on 28/11/2016.
@@ -9,17 +9,11 @@ import com.a2016.proj.bensimhon.kamoun.java_project_2016.model.datasource.List_B
 
 public class DBManagerFactory {
 
-    static List_Business businessDB = null;
-    static List_BusinessActivity businessActDB = null;
+    static DB_manager manager = null;
 
-    public static List_Business getBusinessManager() {
-        if (businessDB == null)
-            businessDB = new List_Business();
-        return businessDB;
-    }
-    public static List_BusinessActivity getBusinessActManager() {
-        if (businessActDB == null)
-            businessActDB = new List_BusinessActivity();
-        return businessActDB;
+    public static DB_manager getManager() {
+        if (manager == null)
+            manager = new List_DBManager();
+        return manager;
     }
 }

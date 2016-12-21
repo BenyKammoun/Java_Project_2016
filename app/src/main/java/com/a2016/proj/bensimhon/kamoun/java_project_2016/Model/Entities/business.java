@@ -1,6 +1,5 @@
 package com.a2016.proj.bensimhon.kamoun.java_project_2016.model.entities;
 
-import android.provider.ContactsContract;
 import java.net.URL;
 
 /**
@@ -8,13 +7,19 @@ import java.net.URL;
  */
 
 public class Business {
+    /*
+    * Business class fields.
+    * */
     private int ID;
     private String name;
     private Address address;
-    private Long phoneNumb;
-    private ContactsContract.CommonDataKinds.Email email;
+    private String phoneNumb;
+    private String email;
     private URL website;
 
+    /*
+    * Business class methods (getters, setters).
+    * */
     public int getID() {
         return ID;
     }
@@ -29,25 +34,20 @@ public class Business {
         this.name = name;
     }
 
-    public Address getAddress() {
-        return address;
-    }
+    public Address getAddress() { return address; }
+    public void setAddress(Address address) { this.address = address; }
 
-    public void setAddress(Address address) {
-        this.address = address;
-    }
-
-    public Long getPhoneNumb() {
+    public String getPhoneNumb() {
         return phoneNumb;
     }
-    public void setPhoneNumb(Long phoneNumb) {
+    public void setPhoneNumb(String phoneNumb) {
         this.phoneNumb = phoneNumb;
     }
 
-    public ContactsContract.CommonDataKinds.Email getEmail() {
+    public String getEmail() {
         return email;
     }
-    public void setEmail(ContactsContract.CommonDataKinds.Email email) {
+    public void setEmail(String email) {
         this.email = email;
     }
 

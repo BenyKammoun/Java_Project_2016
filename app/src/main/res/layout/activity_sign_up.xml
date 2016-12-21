@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_sign_up"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.a2016.proj.bensimhon.kamoun.java_project_2016.controller.SignUpActivity">
+
+    <TextView
+        android:id="@+id/reg_txt_vew"
+        style="@style/TittleTextView"
+        android:text="@string/register" />
+
+    <ImageView
+        android:id="@+id/reg_icon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/reg_txt_vew"
+        android:padding="16dp"
+        android:src="@drawable/sign_up"
+        android:contentDescription="@string/sgnp_dscptn" />
+
+    <EditText
+        android:id="@+id/new_usn"
+        android:layout_below="@id/reg_icon"
+        style="@style/PrimaryEdiTextStyle"
+        android:inputType="textEmailAddress"
+        android:text="@string/user_name"/>
+
+    <EditText
+        android:id="@+id/pswd"
+        android:layout_below="@+id/new_usn"
+        style="@style/PrimaryEdiTextStyle"
+        android:inputType="textPassword"
+        android:text="@string/passwd" />
+
+    <EditText
+        android:id="@+id/cnfrm_pswd"
+        android:layout_below="@+id/pswd"
+        style="@style/PrimaryEdiTextStyle"
+        android:inputType="textPassword"
+        android:text="@string/passwd"/>
+
+    <CheckBox
+        android:id="@+id/show_psswd_cbx"
+        style="@style/SecondaryTextView"
+        android:layout_below="@+id/cnfrm_pswd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:buttonTint="@android:color/white"
+        android:text="@string/shw_me_psswd"
+        android:onClick="onCheckBoxClick"/>
+
+    <ImageView
+        android:id="@+id/reg_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:src="@mipmap/ic_done_white_24dp"
+        android:contentDescription="@string/nxt_dscpn"
+        android:onClick="signUpClick" />
+
+</RelativeLayout>
