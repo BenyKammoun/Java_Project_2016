@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#0099cc"
+    android:background="@color/colorPrimary"
     tools:context="com.a2016.proj.bensimhon.kamoun.java_project_2016.controller.Wellcome">
 
     <!-- The primary full-screen view. This can be replaced with whatever view
@@ -23,7 +23,7 @@
          android:fitsSystemWindows. -->
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="509dp"
         android:fitsSystemWindows="true">
 
         <LinearLayout
