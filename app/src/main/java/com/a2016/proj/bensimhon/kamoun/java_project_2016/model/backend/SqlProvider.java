@@ -46,17 +46,17 @@ public class SqlProvider extends ContentProvider {
     @Override
     public Cursor query(Uri uri, String[] projection, String selection, String[] selectionArgs, String sortOrder) {
         SQLiteQueryBuilder qb = new SQLiteQueryBuilder();
-        String tableName = uri.getPathSegments().get(1);
+        String tableName = uri.getPathSegments().get(0);
         switch (tableName) {
             case businessCase:
                 qb.setTables(BUSINESS_TABLE_NAME);
-                switch (uri.getPathSegments().get(2)) {
+                switch (uri.getPathSegments().get(1)) {
                     case "ALL":
                         qb.setProjectionMap(PROJECTION);
                         break;
 
                     case "SINGLE":
-                        qb.appendWhere(DBContract.BusinessC.ID + "=" + uri.getPathSegments().get(3));
+                        qb.appendWhere(DBContract.BusinessC.ID + "=" + uri.getPathSegments().get(2));
                         break;
                     default:
                         break;
@@ -64,12 +64,12 @@ public class SqlProvider extends ContentProvider {
                 break;
             case businessActivityCase:
                 qb.setTables(BUSINESSACTIVITY_TABLE_NAME);
-                switch (uri.getPathSegments().get(2)) {
+                switch (uri.getPathSegments().get(1)) {
                     case "ALL":
                         qb.setProjectionMap(PROJECTION);
                         break;
                     case "SINGLE":
-                        qb.appendWhere(DBContract.BusinessActivityC.ID + "=" + uri.getPathSegments().get(3));
+                        qb.appendWhere(DBContract.BusinessActivityC.ID + "=" + uri.getPathSegments().get(2));
                         break;
                     default:
                         break;
