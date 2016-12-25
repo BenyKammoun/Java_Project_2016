@@ -12,8 +12,8 @@ public class DBContract {
     /**
      * The authority for the contacts provider
      */
-    public static final String BusinessAUTHORITY = "com.a2016.proj.sql/business/";
-    public static final String BusinessActivityAUTHORITY = "com.a2016.proj.sql/businessActivity/";
+    public static final String BusinessAUTHORITY = "com.a2016.proj/business/";
+    public static final String BusinessActivityAUTHORITY = "com.a2016.proj/businessActivity/";
 
 
     public static class BusinessC {

@@ -3,14 +3,15 @@ package com.a2016.proj.bensimhon.kamoun.java_project_2016.model.backend;
 import android.content.ContentProvider;
 import android.content.ContentUris;
 import android.content.ContentValues;
+import android.content.Context;
 import android.database.Cursor;
 import android.net.Uri;
 import android.util.Log;
 
-public class ListDbContentProvider extends ContentProvider {
+public class DbContentProvider extends ContentProvider {
 
-
-    DB_manager manager = DBManagerFactory.getManager();
+    Context context;
+    DB_manager manager;
     final String TAG = "ContentProvider";
     final String businessCase = "business";
     final String businessActivityCase = "businessActivity";
@@ -19,8 +20,8 @@ public class ListDbContentProvider extends ContentProvider {
     public int delete(Uri uri, String selection, String[] selectionArgs) {
         Log.d(TAG, "delete " + uri.toString());
 
-        String listName = uri.getLastPathSegment();
-        long id = ContentUris.parseId(uri);
+        String listName = uri.getPathSegments().get(0);
+        long id = Long.parseLong(uri.getPathSegments().get(1));
         switch (listName) {
             case businessCase:
                 if (manager.removeBusiness(id))
@@ -47,7 +48,7 @@ public class ListDbContentProvider extends ContentProvider {
 
         Log.d(TAG, "insert " + uri.toString());
 
-        String listName = uri.getLastPathSegment();
+        String listName = uri.getPathSegments().get(0);
         long id = -1;
         switch (listName) {
             case businessCase:
@@ -66,6 +67,9 @@ public class ListDbContentProvider extends ContentProvider {
     @Override
     public boolean onCreate() {
         Log.d(TAG, "onCreate");
+         context = getContext();
+         manager = DBManagerFactory.getManager(context);
+
         return false;
     }
 
@@ -75,8 +79,7 @@ public class ListDbContentProvider extends ContentProvider {
 
         Log.d(TAG, "query " + uri.toString());
 
-        String listName = uri.getLastPathSegment();
-        // String s = DBContract.Student.STUDENT_URI.getLastPathSegment();
+        String listName = uri.getPathSegments().get(0);
         switch (listName) {
             case businessCase:
                 return manager.getBusinesses();//
@@ -93,8 +96,8 @@ public class ListDbContentProvider extends ContentProvider {
                       String[] selectionArgs) {
         Log.d(TAG, "update " + uri.toString());
 
-        String listName = uri.getLastPathSegment();
-        long id = ContentUris.parseId(uri);
+        String listName = uri.getPathSegments().get(0);
+        long id = Long.parseLong(uri.getPathSegments().get(1));
         int indexToUpdate = -1;
         switch (listName) {
             case businessCase:

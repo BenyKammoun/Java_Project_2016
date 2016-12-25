@@ -22,10 +22,12 @@ public class mainTest extends AppCompatActivity {
         setContentView(R.layout.activity_main_test);
     }
 
-
+    static int i=10;
     private void addBusiness() {
+
         final Uri uri = DBContract.BusinessC.AUTHORITY_URI;
         final ContentValues contentValues = new ContentValues();
+        contentValues.put(DBContract.BusinessC.ID, i++);
         contentValues.put(DBContract.BusinessC.PHONE, "0501234657");
         contentValues.put(DBContract.BusinessC.NAME, "mybusn");
         contentValues.put(DBContract.BusinessC.CITY, "aaaaa");
@@ -49,22 +51,38 @@ public class mainTest extends AppCompatActivity {
     }
 
     public void testRead(View view) {
-        String[] projection = new String[]{DBContract.BusinessC.ID, DBContract.BusinessC.NAME, DBContract.BusinessC.PHONE};
-        Cursor cursor =
-                getContentResolver().query(Uri.parse(DBContract.BusinessC.AUTHORITY_URI.toString()+"/ALL"),
-                        projection,
+
+        new AsyncTask<Void, Void, Cursor>() {
+            @Override
+            protected void onPreExecute() {
+                super.onPreExecute();
+            }
+
+            @Override
+            protected Cursor doInBackground(Void... params) {
+                return getContentResolver().query(DBContract.BusinessC.AUTHORITY_URI,
+                        null,
                         null,
                         null,
                         null);
-        if (cursor.moveToFirst()) {
-            do {
+                // return null;
+            }
 
-                long id = cursor.getLong(cursor.getColumnIndex(DBContract.BusinessC.ID));
-                String name = cursor.getString(cursor.getColumnIndex(DBContract.BusinessC.NAME));
-                String phone = cursor.getString(cursor.getColumnIndex(DBContract.BusinessC.PHONE));
+            @Override
+            protected void onPostExecute(Cursor cursor) {
+                super.onPostExecute(cursor);
+                if (cursor.moveToFirst()) {
+                    do {
 
-            } while (cursor.moveToNext());
-        }
+                        long id = cursor.getLong(cursor.getColumnIndex(DBContract.BusinessC.ID));
+                        String name = cursor.getString(cursor.getColumnIndex(DBContract.BusinessC.NAME));
+                        String phone = cursor.getString(cursor.getColumnIndex(DBContract.BusinessC.PHONE));
+
+                    } while (cursor.moveToNext());
+                }
+            }
+
+        }.execute();
 
     }
 }

@@ -1,6 +1,7 @@
 package com.a2016.proj.bensimhon.kamoun.java_project_2016.model.backend;
 
 import android.app.Service;
+import android.content.Context;
 import android.content.Intent;
 import android.os.IBinder;
 import android.util.Log;
@@ -51,7 +52,7 @@ public class MyService extends Service {
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
-                    if(DBManagerFactory.getManager().isUpdate())
+                    if(DBManagerFactory.getManager(null).isUpdate())
                     {
                         Log.d(TAG,"isUpdatet run ..");
                         Intent intent1 = new Intent("com.oshri.academy.myaction");
