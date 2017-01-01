@@ -99,12 +99,22 @@ public class MySQL_PHP_DBManager implements DB_manager {
     }
 
     @Override
+    public Cursor getAllActivitiesOfBusiness() {
+        return null;
+    }
+
+    @Override
     public boolean updateBusiness(long id, ContentValues values) {
         return false;
     }
 
     @Override
     public boolean updateBusinessActivity(long id, ContentValues values) {
+        return false;
+    }
+
+    @Override
+    public boolean linkActToBusiness(Integer bId, Integer aId) {
         return false;
     }
 

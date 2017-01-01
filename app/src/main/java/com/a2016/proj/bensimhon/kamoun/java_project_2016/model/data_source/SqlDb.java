@@ -88,6 +88,11 @@ public class SqlDb extends SQLiteOpenHelper implements DB_manager {
     }
 
     @Override
+    public Cursor getAllActivitiesOfBusiness() {
+        return null;
+    }
+
+    @Override
     public boolean updateBusiness(long id, ContentValues values) {
         int count = db.update(BUSINESS_TABLE_NAME,values,DBContract.BusinessC.ID + " = " + id + "", null);
         if(count!=-1)
@@ -100,6 +105,11 @@ public class SqlDb extends SQLiteOpenHelper implements DB_manager {
         int count = db.update(BUSINESSACTIVITY_TABLE_NAME,values,DBContract.BusinessC.ID + " = " + id + "", null);
         if(count!=-1)
             return true;
+        return false;
+    }
+
+    @Override
+    public boolean linkActToBusiness(Integer bId, Integer aId) {
         return false;
     }
 

@@ -2,6 +2,12 @@
     <!-- top bar string values -->
     <string name="app_name">App Name</string>
 
+    <!-- Shared preference strings -->
+    <string name="SpUserName">Name</string>
+    <string name="SpUserPassword">Password</string>
+    <string name="SpAppShPref">mySharedPref</string>
+
+
     <!-- TextViews strings -->
     <string name="sign_in">Sign In</string>
     <string name="shw_me_psswd">Show me password</string>
@@ -22,7 +28,19 @@
     <string name="nxt_dscpn">Next Icon</string>
     <string name="bsnss_img_dscptn">Business Image</string>
 
+    <!-- Wellcome activity -->
     <string name="title_activity_wellcome">Wellcome</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
+
+    <!-- Add Business Activity -->
+    <string name="bus_tittle">Enter your business details.</string>
+    <string name="bus_name">Name</string>
+    <string name="bus_address">Address</string>
+    <string name="bus_country">Country</string>
+    <string name="bus_city">City</string>
+    <string name="bus_street">Street</string>
+    <string name="bus_number">Phone Number:</string>
+    <string name="bus_eMail">Email address:</string>
+    <string name="bus_website">Link to website:</string>
 </resources>

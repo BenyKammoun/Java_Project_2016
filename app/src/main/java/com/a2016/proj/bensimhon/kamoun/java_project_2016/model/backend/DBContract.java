@@ -22,7 +22,7 @@ public class DBContract {
          */
         public static final Uri AUTHORITY_URI = Uri.parse("content://" + BusinessAUTHORITY);
 
-        public static final String ID = "id";
+        public static final String ID = "_id";
         public static final String NAME = "name";
         public static final String PHONE = "phone";
         public static final String Email = "email";
@@ -45,7 +45,7 @@ public class DBContract {
         public static final String EDATE = "endDate";
         public static final String PRICE = "price";
         public static final String DETIALES = "details";
-        public static final String ID = "id";
+        public static final String ID = "_id";
 
     }
 

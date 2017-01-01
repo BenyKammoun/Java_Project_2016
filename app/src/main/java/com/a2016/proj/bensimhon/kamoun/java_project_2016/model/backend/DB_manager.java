@@ -27,9 +27,12 @@ public interface DB_manager {
 
     Cursor getBusinesses();
     Cursor getBusinessesAct();
+    Cursor getAllActivitiesOfBusiness();
 
     boolean updateBusiness(long id, ContentValues values);
     boolean updateBusinessActivity(long id, ContentValues values);
+
+    boolean linkActToBusiness(Integer bId,Integer aId);
 
     boolean isUpdate();
 
