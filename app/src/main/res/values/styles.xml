@@ -8,8 +8,63 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <style name="AppEditText">
-
+    <style name="generalnotitle">
+        <item name="android:windowNoTitle">true</item>
     </style>
+
+    <!-- TextView Primary -->
+    <style name="TittleTextView">
+        <item name="android:textSize">34sp</item>
+        <item name="android:textColor">@color/abc_primary_text_material_dark</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <!-- TextView Secondary -->
+    <style name="SecondaryTextView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/abc_primary_text_material_dark</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:padding">16dp</item>
+    </style>
+
+    <!-- EdtitText Primary Style -->
+    <style name="PrimaryEdiTextStyle">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/abc_primary_text_material_dark</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:selectAllOnFocus">true</item>
+    </style>
+
+    <!-- Button Style -->
+    <style name="ButtonStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:backgroundTint">@color/colorAccent</item>
+        <item name="android:layout_centerHorizontal">true</item>
+    </style>
+
+    <style name="HeadLineTextView">
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="FullscreenTheme" parent="AppTheme">
+        <item name="android:actionBarStyle">@style/FullscreenActionBarStyle</item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="android:windowBackground">@null</item>
+        <item name="metaButtonBarStyle">?android:attr/buttonBarStyle</item>
+        <item name="metaButtonBarButtonStyle">?android:attr/buttonBarButtonStyle</item>
+    </style>
+
+    <style name="FullscreenActionBarStyle" parent="Widget.AppCompat.ActionBar">
+        <item name="android:background">@color/black_overlay</item>
+    </style>
+
 
 </resources>

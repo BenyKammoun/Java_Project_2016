@@ -8,44 +8,27 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.a2016.proj.bensimhon.kamoun.java_project_2016.MainActivity">
+    tools:context="com.a2016.proj.bensimhon.kamoun.java_project_2016.controller.MainActivity">
 
-    <TextView
-        android:id="@+id/sign_txt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/sign_in" />
-
-    <EditText
-        android:id="@+id/user_nm_input"
+    <ImageView
+        android:id="@+id/bsnss_img"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/sign_txt"
-        android:text="@string/user_name"
-        android:inputType="textEmailAddress"
-        android:selectAllOnFocus="true"/>
+        android:contentDescription="@string/bsnss_img_dscptn"/>
 
-    <EditText
-        android:id="@+id/passwd_input"
+    <ListView
+        android:id="@+id/bsness_lst"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/user_nm_input"
-        android:text="@string/passwd"
-        android:inputType="textPassword"
-        android:selectAllOnFocus="true"/>
+        android:layout_height="wrap_content">
+
+    </ListView>
 
     <Button
-        android:id="@+id/sign_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/passwd_input"
-        android:text="@string/sign_in"/>
-
-    <Button
-        android:id="@+id/reg_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/sign_button"
-        android:text="@string/register"/>
-
+        android:id="@+id/add_bttn"
+        style="@style/ButtonStyle"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:text="@string/add"
+        android:onClick="addBttnClick"/>
 </RelativeLayout>
