@@ -6,11 +6,15 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.Button;
+import android.widget.RelativeLayout;
 
 import com.a2016.proj.bensimhon.kamoun.java_project_2016.R;
 import com.a2016.proj.bensimhon.kamoun.java_project_2016.model.backend.DBContract;
 import com.a2016.proj.bensimhon.kamoun.java_project_2016.model.entities.Business;
+import com.a2016.proj.bensimhon.kamoun.java_project_2016.model.enums.BusinessType;
 
 import java.net.URI;
 
@@ -20,6 +24,12 @@ public class mainTest extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_test);
+
+        View view = findViewById(R.id.activity_main_test);
+        RelativeLayout rl=(RelativeLayout)view;
+        rl.addView(new Button(rl.getContext()));
+        View v = LayoutInflater.from(rl.getContext()).inflate(R.layout.buiseness_item_view, null);
+        rl.addView(v);
     }
 
     static int i=10;
@@ -35,6 +45,7 @@ public class mainTest extends AppCompatActivity {
         contentValues.put(DBContract.BusinessC.COUNTRY, "country");
         contentValues.put(DBContract.BusinessC.Email, "yosef@test.com");
         contentValues.put(DBContract.BusinessC.WEBSITE, "aaaa.co.il");
+        contentValues.put(DBContract.BusinessC.TYPE, BusinessType.Tourism_Agency.toString());
 
         new AsyncTask<Void,Void,Void>()
         {

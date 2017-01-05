@@ -61,6 +61,7 @@ public class MySQL_PHP_DBManager implements DB_manager {
                             DBContract.BusinessC.COUNTRY,
                             DBContract.BusinessC.CITY,
                             DBContract.BusinessC.STREET,
+                            DBContract.BusinessC.TYPE
                     });
             String str = PHPtools.GET(WEB_URL + "/businesses.php");
             JSONArray array = new JSONObject(str).getJSONArray("businesses");
@@ -81,6 +82,7 @@ public class MySQL_PHP_DBManager implements DB_manager {
                         jsonObject.getString(DBContract.BusinessC.COUNTRY),
                         jsonObject.getString(DBContract.BusinessC.CITY),
                         jsonObject.getString(DBContract.BusinessC.STREET),
+                        jsonObject.getString(DBContract.BusinessC.TYPE),
 
                 });
             }

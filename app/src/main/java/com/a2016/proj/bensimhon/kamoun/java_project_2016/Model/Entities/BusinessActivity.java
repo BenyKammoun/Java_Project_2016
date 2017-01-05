@@ -2,7 +2,7 @@ package com.a2016.proj.bensimhon.kamoun.java_project_2016.model.entities;
 
 import android.text.format.DateFormat;
 
-import com.a2016.proj.bensimhon.kamoun.java_project_2016.model.enums.Countries;
+
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -13,7 +13,7 @@ import java.util.Date;
 
 public class BusinessActivity {
     private String description;
-    private Countries country;
+    private String country;
     CharSequence startDate;
     CharSequence endDate;
     private int price;
@@ -28,11 +28,11 @@ public class BusinessActivity {
         this.description = description;
     }
 
-    public Countries getCountry() {
+    public String getCountry() {
         return country;
     }
 
-    public void setCountry(Countries country) {
+    public void setCountry(String  country) {
         this.country = country;
     }
 

@@ -10,16 +10,14 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.a2016.proj.bensimhon.kamoun.java_project_2016.controller.MainActivity">
 
-    <ImageView
-        android:id="@+id/bsnss_img"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:contentDescription="@string/bsnss_img_dscptn"/>
-
     <ListView
+        android:divider="@null"
+        android:dividerHeight="0dp"
         android:id="@+id/bsness_lst"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:choiceMode="singleChoice"
+        android:listSelector="#ffdb700b">
 
     </ListView>
 

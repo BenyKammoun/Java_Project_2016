@@ -30,6 +30,7 @@ public class DBContract {
         public static final String COUNTRY = "country";
         public static final String CITY = "city";
         public static final String STREET = "street";
+        public static final String TYPE = "type";
 
     }
 

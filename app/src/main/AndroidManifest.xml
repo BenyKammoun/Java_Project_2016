@@ -17,14 +17,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".controller.mainTest">
+
+        </activity>
         <activity android:name=".controller.SignUpActivity" />
         <activity android:name=".controller.Wellcome"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/title_activity_wellcome"
             android:theme="@style/FullscreenTheme" />
-        <activity android:name=".controller.mainTest">
-
-        </activity>
         <activity android:name=".controller.MainActivity">
 
         </activity>

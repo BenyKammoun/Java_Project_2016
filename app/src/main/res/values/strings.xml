@@ -43,4 +43,10 @@
     <string name="bus_number">Phone Number:</string>
     <string name="bus_eMail">Email address:</string>
     <string name="bus_website">Link to website:</string>
+
+    <!-- business item view-->
+    <string name="bivbus_name">Name</string>
+    <string name="bivbus_mail">mail</string>
+
+
 </resources>

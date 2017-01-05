@@ -1,30 +1,27 @@
 package com.a2016.proj.bensimhon.kamoun.java_project_2016.model.entities;
 
-import com.a2016.proj.bensimhon.kamoun.java_project_2016.model.enums.Cities;
-import com.a2016.proj.bensimhon.kamoun.java_project_2016.model.enums.Countries;
-
 /**
  * Created by Binyamin Kamoun on 11/12/2016.
  */
 
 public class Address {
-    private Countries country;
-    private Cities city;
+    private String  country;
+    private String city;
     private String street;
 
-    public Countries getCountry() {
+    public String getCountry() {
         return country;
     }
 
-    public void setCountry(Countries country) {
+    public void setCountry(String country) {
         this.country = country;
     }
 
-    public Cities getCity() {
+    public String getCity() {
         return city;
     }
 
-    public void setCity(Cities city) {
+    public void setCity(String city) {
         this.city = city;
     }
 

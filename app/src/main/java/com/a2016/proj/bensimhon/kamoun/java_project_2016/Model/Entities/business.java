@@ -1,5 +1,7 @@
 package com.a2016.proj.bensimhon.kamoun.java_project_2016.model.entities;
 
+import com.a2016.proj.bensimhon.kamoun.java_project_2016.model.enums.BusinessType;
+
 import java.net.URL;
 
 /**
@@ -10,11 +12,21 @@ public class Business {
     /*
     * Business class fields.
     * */
+
+    public BusinessType getType() {
+        return type;
+    }
+
+    public void setType(BusinessType type) {
+        this.type = type;
+    }
+
     private int ID;
     private String name;
     private Address address;
     private String phoneNumb;
     private String email;
+    private BusinessType type;
     private URL website;
 
     /*
