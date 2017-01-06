@@ -1,6 +1,7 @@
 package com.a2016.proj.bensimhon.kamoun.java_project_2016.controller;
 
 import android.content.ContentValues;
+import android.content.Intent;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.AsyncTask;
@@ -13,6 +14,7 @@ import android.widget.RelativeLayout;
 
 import com.a2016.proj.bensimhon.kamoun.java_project_2016.R;
 import com.a2016.proj.bensimhon.kamoun.java_project_2016.model.backend.DBContract;
+import com.a2016.proj.bensimhon.kamoun.java_project_2016.model.backend.MyService;
 import com.a2016.proj.bensimhon.kamoun.java_project_2016.model.entities.Business;
 import com.a2016.proj.bensimhon.kamoun.java_project_2016.model.enums.BusinessType;
 
@@ -95,5 +97,10 @@ public class mainTest extends AppCompatActivity {
 
         }.execute();
 
+    }
+
+    public void testSer(View view) {
+        Intent intent = new Intent(this, MyService.class);
+        startService(intent);
     }
 }

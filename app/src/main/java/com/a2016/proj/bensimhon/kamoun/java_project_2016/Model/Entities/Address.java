@@ -5,7 +5,7 @@ package com.a2016.proj.bensimhon.kamoun.java_project_2016.model.entities;
  */
 
 public class Address {
-    private String  country;
+    private String country;
     private String city;
     private String street;
 

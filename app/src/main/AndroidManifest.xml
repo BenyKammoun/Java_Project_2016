@@ -27,7 +27,9 @@
             android:theme="@style/FullscreenTheme" />
         <activity android:name=".controller.MainActivity">
 
+
         </activity>
+        <activity android:name=".controller.AddBusinessActivity"/>
 
         <provider
             android:name=".model.backend.DbContentProvider"

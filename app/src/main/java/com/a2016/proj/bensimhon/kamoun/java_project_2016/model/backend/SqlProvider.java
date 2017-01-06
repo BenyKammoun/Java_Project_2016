@@ -23,7 +23,7 @@ import java.util.HashMap;
 
 public class SqlProvider extends ContentProvider {
 
-    SqlDb SqlDbManger = null;
+     static SqlDb SqlDbManger = null;
     protected SQLiteDatabase db;
     private static HashMap<String, String> PROJECTION;
 

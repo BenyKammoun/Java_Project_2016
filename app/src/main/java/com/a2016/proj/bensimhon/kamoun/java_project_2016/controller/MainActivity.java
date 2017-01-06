@@ -1,6 +1,7 @@
 package com.a2016.proj.bensimhon.kamoun.java_project_2016.controller;
 
 import android.content.Context;
+import android.content.Intent;
 import android.database.Cursor;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -32,11 +33,6 @@ public class MainActivity extends Activity {
         updateItemList(this);
     }
 
-    public class Holder
-    {
-        TextView tv;
-        ImageView img;
-    }
 
     private void updateItemList(final Context context) {
 
@@ -117,5 +113,15 @@ public class MainActivity extends Activity {
             }
         }.execute();
 
+    }
+
+    public void addBttnClick(View view) {
+        try {
+            Intent regIntent = new Intent(this, AddBusinessActivity.class);
+            startActivity(regIntent);
+        }
+        catch (Throwable ex){
+            String str =ex.getMessage();
+        }
     }
 }
