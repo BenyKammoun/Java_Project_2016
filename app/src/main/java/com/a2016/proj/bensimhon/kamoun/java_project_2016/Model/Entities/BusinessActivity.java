@@ -16,6 +16,16 @@ public class BusinessActivity {
     private String country;
     CharSequence startDate;
     CharSequence endDate;
+
+    public int getBusinessId() {
+        return businessId;
+    }
+
+    public void setBusinessId(int businessId) {
+        this.businessId = businessId;
+    }
+
+    private int businessId;
     private int price;
     private String details;
     private int id;

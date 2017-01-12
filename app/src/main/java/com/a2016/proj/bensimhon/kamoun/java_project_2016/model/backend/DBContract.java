@@ -40,13 +40,14 @@ public class DBContract {
          */
         public static final Uri AUTHORITY_URI = Uri.parse("content://" + BusinessActivityAUTHORITY);
 
-        public static final String DESCRIPTTION = "_description";
+        public static final String DESCRIPTTION = "description";
         public static final String COUNTRY = "country";
         public static final String SDATE = "startDate";
         public static final String EDATE = "endDate";
         public static final String PRICE = "price";
         public static final String DETIALES = "details";
         public static final String ID = "_id";
+        public static final String BID = "b_id";
 
     }
 

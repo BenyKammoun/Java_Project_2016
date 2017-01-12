@@ -46,6 +46,7 @@ public class ConvertorTools {
         contentValues.put(DBContract.BusinessActivityC.SDATE, businessActivity.getStartDate().toString());
         contentValues.put(DBContract.BusinessActivityC.DESCRIPTTION, businessActivity.getDescription());
         contentValues.put(DBContract.BusinessActivityC.DETIALES, businessActivity.getDetails());
+        contentValues.put(DBContract.BusinessActivityC.BID, businessActivity.getBusinessId());
         return contentValues;
     }
 
@@ -82,6 +83,7 @@ public class ConvertorTools {
         businessAct.setStartDate(contentValues.getAsString(DBContract.BusinessActivityC.SDATE));
         businessAct.setId(contentValues.getAsInteger(DBContract.BusinessActivityC.ID));
         businessAct.setPrice(contentValues.getAsInteger(DBContract.BusinessActivityC.PRICE));
+        businessAct.setBusinessId(contentValues.getAsInteger(DBContract.BusinessActivityC.BID));
         return businessAct;
     }
 
