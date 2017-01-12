@@ -3,6 +3,7 @@ package com.a2016.proj.bensimhon.kamoun.java_project_2016.controller;
 import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.app.Activity;
@@ -16,6 +17,7 @@ import android.widget.Switch;
 import android.widget.TextView;
 
 import com.a2016.proj.bensimhon.kamoun.java_project_2016.R;
+import com.a2016.proj.bensimhon.kamoun.java_project_2016.model.backend.DBContract;
 import com.a2016.proj.bensimhon.kamoun.java_project_2016.model.backend.DBManagerFactory;
 import com.a2016.proj.bensimhon.kamoun.java_project_2016.model.enums.BusinessType;
 
@@ -30,23 +32,25 @@ public class MainActivity extends Activity {
     @Override
     protected void onResume() {
         super.onResume();
-        updateItemList(this);
+        final Uri uri = DBContract.BusinessC.AUTHORITY_URI;
+        updateItemList(this,uri);
+
     }
 
 
-    private void updateItemList(final Context context) {
+    private void updateItemList(final Context context, final Uri uri) {
 
 
         new AsyncTask<Void, Void, Cursor>() {
             ListView itemListView= (ListView) findViewById(R.id.bsness_lst);
             @Override
             protected void onPreExecute() {
-             return;
+                return;
             }
 
             @Override
             protected Cursor doInBackground(Void... params) {
-                return DBManagerFactory.getManager(context).getBusinesses();
+                return   getContentResolver().query(uri,null,null,null,null);
                 // return null;
             }
 

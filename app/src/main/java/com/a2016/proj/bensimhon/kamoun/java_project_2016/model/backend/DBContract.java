@@ -13,6 +13,7 @@ public class DBContract {
      * The authority for the contacts provider
      */
     public static final String BusinessAUTHORITY = "com.a2016.proj/business/";
+    public static final String UsersAUTHORITY = "com.a2016.proj/password/";
     public static final String BusinessActivityAUTHORITY = "com.a2016.proj/businessActivity/";
 
 
@@ -33,7 +34,18 @@ public class DBContract {
         public static final String TYPE = "type";
 
     }
+    public static class UserC {
+        /**
+         * A content:// style uri to the authority for the contacts provider
+         */
+        public static final Uri AUTHORITY_URI = Uri.parse("content://" + BusinessAUTHORITY);
 
+        public static final String ID = "_id";
+        public static final String NAME = "name";
+        public static final String PASSWORD = "password";
+
+
+    }
     public static class BusinessActivityC {
         /**
          * A content:// style uri to the authority for the contacts provider

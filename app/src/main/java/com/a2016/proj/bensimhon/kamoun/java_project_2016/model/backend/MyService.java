@@ -55,7 +55,7 @@ public class MyService extends Service {
                     if(DBManagerFactory.getManager(null).isUpdate())
                     {
                         Log.d(TAG,"isUpdatet run ..");
-                        Intent intent1 = new Intent("com.oshri.academy.myaction");
+                        Intent intent1 = new Intent("com.a2016.proj.Action");
                        MyService.this.sendBroadcast(intent1);
                         //sendBroadcast(intent);
                     }
@@ -65,9 +65,6 @@ public class MyService extends Service {
         };
 
         t.start();
-
-
-
 
         return START_STICKY;
     }

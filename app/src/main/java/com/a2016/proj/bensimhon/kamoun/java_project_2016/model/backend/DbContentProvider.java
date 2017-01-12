@@ -15,14 +15,15 @@ public class DbContentProvider extends ContentProvider {
     final String TAG = "ContentProvider";
     final String businessCase = "business";
     final String businessActivityCase = "businessActivity";
+    final String usersCase = "users";
 
     @Override
     public int delete(Uri uri, String selection, String[] selectionArgs) {
         Log.d(TAG, "delete " + uri.toString());
 
-        String listName = uri.getPathSegments().get(0);
+        String tableName = uri.getPathSegments().get(0);
         long id = Long.parseLong(uri.getPathSegments().get(1));
-        switch (listName) {
+        switch (tableName) {
             case businessCase:
                 if (manager.removeBusiness(id))
                     return 1;
@@ -48,9 +49,9 @@ public class DbContentProvider extends ContentProvider {
 
         Log.d(TAG, "insert " + uri.toString());
 
-        String listName = uri.getPathSegments().get(0);
+        String tableName = uri.getPathSegments().get(0);
         long id = -1;
-        switch (listName) {
+        switch (tableName) {
             case businessCase:
                 id = manager.addBusiness(values);
                 return ContentUris.withAppendedId(uri, id);
@@ -79,8 +80,8 @@ public class DbContentProvider extends ContentProvider {
 
         Log.d(TAG, "query " + uri.toString());
 
-        String listName = uri.getPathSegments().get(0);
-        switch (listName) {
+        String tableName = uri.getPathSegments().get(0);
+        switch (tableName) {
             case businessCase:
                 return manager.getBusinesses();//
 
@@ -96,10 +97,10 @@ public class DbContentProvider extends ContentProvider {
                       String[] selectionArgs) {
         Log.d(TAG, "update " + uri.toString());
 
-        String listName = uri.getPathSegments().get(0);
+        String tableName = uri.getPathSegments().get(0);
         long id = Long.parseLong(uri.getPathSegments().get(1));
         int indexToUpdate = -1;
-        switch (listName) {
+        switch (tableName) {
             case businessCase:
                 if (manager.updateBusiness(id, values))
                     return 1;

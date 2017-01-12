@@ -47,7 +47,7 @@
             android:enabled="true"
             android:exported="true">
             <intent-filter>
-                <action android:name="com.a2016.academy.proj.Action" />
+                <action android:name="com.a2016.proj.Action" />
             </intent-filter>
         </receiver>
 
